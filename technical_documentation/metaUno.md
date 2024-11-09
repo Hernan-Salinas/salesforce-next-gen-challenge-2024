@@ -1,4 +1,3 @@
-# Documentación Técnica
 ## Meta 1: Configuración de Objetos y Campos
 
 ### Objetos Utilizados y sus Configuraciones

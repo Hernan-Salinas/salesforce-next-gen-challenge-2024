@@ -95,8 +95,3 @@ Gestión de cotizaciones.
    - Tipo: Muchos a muchos
    - Mediante: Price Book Entries
    - Descripción: Una materia puede tener diferentes precios según la sede
-
-### Consideraciones Importantes
-1. Los estudiantes están vinculados directamente a sus inscripciones mediante el campo lookup
-2. Cada sede tiene su propia lista de precios
-3. Las materias mantienen el mismo código pero pueden variar en precio según la sede

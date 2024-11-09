@@ -25,16 +25,16 @@ Objeto principal para almacenar la información de los estudiantes.
   - Tipo: Date
   
 - **Promedio**
-  - Tipo: Number(3,1)
+  - Tipo: Number
   - Rango: 0-10
   - Validación: Valor entre 0 y 10 con un decimal
 
-#### 2. Product2 (Objeto Estándar - Materias)
+#### 2. Product (Objeto Estándar - Materias)
 Objeto para gestionar el catálogo de materias.
 
 **Campos Personalizados:**
 - **Código Materia**
-  - Tipo: Text(10)
+  - Tipo: Text
   - Uso: Identificador de la materia
   
 - **Periodo**
@@ -42,7 +42,7 @@ Objeto para gestionar el catálogo de materias.
   - Valores: Semestral, Cuatrimestral
   - Uso: Define el periodo al que pertenece la materia
 
-#### 3. Pricebook2 (Objeto Estándar - Listas de Precios)
+#### 3. Pricebook (Objeto Estándar - Listas de Precios)
 Gestión de precios por sede.
 - Lista de Precios Guanajuato ($17,000)
 - Lista de Precios Nuevo León ($18,000)
@@ -91,7 +91,7 @@ Gestión de cotizaciones.
    - Campo: Estudiante (lookup)
    - Descripción: Un estudiante puede tener múltiples inscripciones
 
-2. **Product2 → Pricebook2**
+2. **Product → Pricebook**
    - Tipo: Muchos a muchos
    - Mediante: Price Book Entries
    - Descripción: Una materia puede tener diferentes precios según la sede

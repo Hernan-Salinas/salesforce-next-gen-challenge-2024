@@ -368,7 +368,7 @@ Descuento_por_Beca__c) / SubtotalSinDescuentos__c > 0.60
 # Documentación Meta 4 - AUTOMATIZACIÓN DEL PROCESO DE COTIZACIÓN
 
 ### Descripción General
-Este documento detalla la implementación del proceso automatizado de envío de cotizaciones por email en el Sistema de Cobranza Universitaria en Salesforce. La solución evolucionó desde un intento inicial usando Flow hasta una implementación final usando Apex Trigger.
+Esta sección detalla la implementación del proceso automatizado de envío de cotizaciones por email en el Sistema de Cobranza Universitaria en Salesforce. La solución evolucionó desde un intento inicial usando Flow hasta una implementación final usando Apex Trigger.
 
 ### Evolución de la Solución
 
@@ -577,8 +577,6 @@ Esta sección detalla la implementación del proceso de aprobación y reglas de 
 5. Sistema actualiza estado automáticamente
 
 ---
-
-## 2. CÓDIGO FUENTE
 
 ### Configuración del Proceso de Aprobación
 ```xml

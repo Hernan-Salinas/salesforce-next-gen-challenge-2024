@@ -42,7 +42,7 @@ Objeto estándar utilizado para almacenar la información de los estudiantes.
   - Rango válido: 0-10
   - Requerido: Sí
 
-#### 2. Product2 (Materias)
+#### 2. Product (Materias)
 Objeto estándar para gestionar el catálogo de materias disponibles.
 
 **Campos Personalizados:**
@@ -57,7 +57,7 @@ Objeto estándar para gestionar el catálogo de materias disponibles.
     * Cuatrimestral
   - Requerido: Sí
 
-#### 3. Pricebook2 (Listas de Precios)
+#### 3. Pricebook (Listas de Precios)
 Configuración de precios por sede mediante listas de precios estándar.
 
 **Listas Configuradas:**
@@ -137,7 +137,7 @@ Objeto estándar para gestionar cotizaciones de inscripción.
    * Relación: Un estudiante puede tener múltiples inscripciones
    * Campo de relación: Estudiante (lookup en Opportunity)
 
-2. Product2 → Pricebook2
+2. Product → Pricebook
    * Tipo: Muchos a muchos
    * Relación: Una materia puede tener diferentes precios según la sede
    * Implementación: A través de Price Book Entries

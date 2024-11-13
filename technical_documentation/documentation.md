@@ -166,7 +166,7 @@ Valida que no se excedan los límites de materias según el periodo del estudian
 **Mensaje de Error:** 
 "El número de materias excede el límite permitido para el periodo seleccionado. Semestral: máximo 7 materias. Cuatrimestral: máximo 4 materias."
 
-## 2. DOCUMENTACIÓN TÉCNICA Meta 2 - IMPLEMENTACIÓN DE CÁLCULOS DE COSTOS
+## DOCUMENTACIÓN TÉCNICA Meta 2 - IMPLEMENTACIÓN DE CÁLCULOS DE COSTOS
 
 ### Descripción General
 Esta sección detalla la implementación de los cálculos de costos y descuentos para el Sistema de Cobranza Universitaria en Salesforce, incluyendo la lógica de precios por sede y los diferentes tipos de descuentos aplicables.
@@ -280,7 +280,7 @@ IF(ISPICKVAL(Opportunity.FormaPago__c, 'Contado'),
 SubtotalSinDescuentos__c - Descuento_por_Cantidad_de_Materias__c - Descuento_por_Pago_de_Contado__c
 ```
 
-## 1. DOCUMENTACIÓN TÉCNICA Meta 3 - CONFIGURACIÓN DE DESCUENTOS Y BECAS
+## DOCUMENTACIÓN TÉCNICA Meta 3 - CONFIGURACIÓN DE DESCUENTOS Y BECAS
 
 ### Descripción General
 Este sección detalla la implementación del sistema de becas y descuentos para el Sistema de Cobranza Universitaria en Salesforce, incluyendo los diferentes tipos de becas disponibles y la validación del límite máximo de descuentos.
@@ -513,7 +513,7 @@ public class QuoteEmailHandler {
 trigger QuoteEmailTrigger on Quote (after update) {
     QuoteEmailHandler.sendQuoteEmail(Trigger.new, Trigger.oldMap);
 }
-``
+```
 
 # Documentación Meta 5 - VALIDACIÓN Y REGLAS DE APROBACIÓN
 

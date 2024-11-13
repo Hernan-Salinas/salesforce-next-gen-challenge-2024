@@ -157,6 +157,9 @@ OR(
     )
 )
 ```
+**Explicación:** La regla utiliza una estructura OR-AND para evaluar dos condiciones independientes de periodo académico, donde el OR permite que falle la validación si cualquier límite se excede, mientras el AND asegura que se verifique tanto el tipo de periodo como su límite correspondiente.
+
+**Razonamiento:** Utiliza ISPICKVAL para comparaciones eficientes de valores de lista de selección, además de proporcionar mensajes de error específicos para cada caso.
 
 **Descripción:** 
 Valida que no se excedan los límites de materias según el periodo del estudiante:
@@ -186,6 +189,9 @@ NumeroMaterias__c * CASE(Campus__c,
     0)
 ```
 
+**Explicación:** El campo utiliza CASE para determinar el precio según el campus y lo multiplica por el número de materias, retornando 0 si el campus no está en la lista definida.
+**Razonamiento:** Se implementó usando CASE para centralizar los precios y facilitar su actualización, mientras que la multiplicación directa mantiene el cálculo simple y eficiente.
+
 #### 2. Descuento_por_Cantidad_de_Materias
 **Tipo:** Campo de Fórmula (Currency)
 **Descripción:** Calcula el descuento aplicable según la cantidad de materias.
@@ -210,6 +216,9 @@ CASE(NumeroMaterias__c,
           'Querétaro', 15000,
           0) * 0.15 * (NumeroMaterias__c - 1)))
 ```
+
+**Explicación:** Aplica descuentos progresivos según el número de materias: sin descuento para una materia, 10% en la segunda, y 15% en cada materia adicional.
+**Razonamiento:** La estructura CASE maneja los diferentes escenarios de descuento, calculando el monto exacto según la cantidad de materias inscrita.
 
 #### 3. Descuento_por_Pago_de_Contado
 **Tipo:** Campo de Fórmula (Currency)
@@ -351,6 +360,9 @@ CASE(TipoBeca__c,
     0)
 ```
 
+**Explicación:** Determina el descuento por beca evaluando el tipo seleccionado y aplicando el porcentaje correspondiente, con validación adicional de promedio para beca de excelencia.
+**Razonamiento:** Se usa CASE anidado con IF para manejar condiciones específicas de cada beca.
+
 #### 2. Total_Final (Actualizado)
 ```
 SubtotalSinDescuentos__c - Descuento_por_Cantidad_de_Materias__c - 
@@ -364,6 +376,8 @@ Descuento_por_Pago_de_Contado__c - Descuento_por_Beca__c
 (Descuento_por_Cantidad_de_Materias__c + Descuento_por_Pago_de_Contado__c + 
 Descuento_por_Beca__c) / SubtotalSinDescuentos__c > 0.60
 ```
+
+**Explicación:** Calcula el porcentaje total de descuentos sumando todos los tipos y comparando contra el límite máximo del 60%.
 
 # Documentación Meta 4 - AUTOMATIZACIÓN DEL PROCESO DE COTIZACIÓN
 
@@ -508,12 +522,16 @@ public class QuoteEmailHandler {
 }
 ```
 
+**Explicación:** Maneja el envío automático de emails cuando una cotización es aprobada, verificando el cambio de estado y obteniendo la información necesaria en una sola query.
+**Razonamiento:** Se implementó como clase handler separada para mejor mantenibilidad y reutilización, usando procesamiento en bulk para eficiencia.
+
 ### Apex Trigger: QuoteEmailTrigger
 ```apex
 trigger QuoteEmailTrigger on Quote (after update) {
     QuoteEmailHandler.sendQuoteEmail(Trigger.new, Trigger.oldMap);
 }
 ```
+**Explicación:** Activa el envío de email solo después de actualizar una cotización, delegando la lógica al handler.
 
 # Documentación Meta 5 - VALIDACIÓN Y REGLAS DE APROBACIÓN
 
@@ -561,6 +579,9 @@ Esta sección detalla la implementación del proceso de aprobación y reglas de 
 
 **Final Rejection Actions:**
 - Field Update: EstadoCotizacion__c = "Rechazada"
+
+Explicación: Gestiona el flujo de aprobación desde la solicitud hasta la decisión final, actualizando estados y notificando automáticamente.
+
 
 #### 4. Page Layout Modifications
 **Tipo:** Lightning Record Page

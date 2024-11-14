@@ -37,7 +37,7 @@ Prueba 2.2: Inscripción exitosa con 7 materias
 #### Caso de Prueba 3: Cálculos por Campus
 **Objetivo**: Verificar cálculos correctos según campus.
 
-**Caputras en Images: Pruebas 3.1 a 3.4**
+**Capturas en Images: Pruebas 3.1 a 3.4**
 Matriz de Pruebas: 
 | Campus | Materias | Resultado |
 |--------|----------|-----------|
@@ -59,7 +59,7 @@ Prueba 3.4: Querétaro
 - 2 materias: 10% en segunda
 - 3 materias: 15% en adicionales
 
-**Caputras en Images: Pruebas 4.1 a 4.3**
+**Capturas en Images: Pruebas 4.1 a 4.3**
 Prueba 4.1: 1 materia
 Prueba 4.2: 2 materias
 Prueba 4.3: 4 materias
@@ -90,8 +90,10 @@ Prueba 5.4: Necesidad Económica
 1. Aprobar cotización
 2. Verificar envío de email
 3. Validar contenido del PDF
-
-[CAPTURA DE PANTALLA SUGERIDA: Email recibido con cotización]
+   
+**Captura en Images: Pruebas 6.1 a 6.2**
+Prueba 6.1: Cotización Pago de Contado
+Prueba 6.2: Cotización Pago Mensualidades
 
 ### META 5: PROCESO DE APROBACIÓN
 

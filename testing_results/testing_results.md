@@ -100,53 +100,11 @@ Prueba 6.2: Cotización Pago Mensualidades
 #### Caso de Prueba 7: Flujo de Aprobación
 **Objetivo**: Validar proceso completo de aprobación.
 
+**Captura en Images: Pruebas 7.1 a 7.5**
 **Escenarios**:
 1. Envío a aprobación
-2. Aprobación del coordinador
-3. Rechazo y comentarios
-4. Reenvío después de ajustes
+2. Correo recibido de aprobación
+3. Aprobación o rechazo de la cotización
+4. Comentarios de aprobación
+5. Aprobación completada
 
-[CAPTURA DE PANTALLA SUGERIDA: Proceso de aprobación en acción]
-
-### RESULTADOS DE PRUEBAS DE USABILIDAD
-
-#### Feedback de Usuarios
-**Grupo de Prueba**: 
-- 3 Coordinadores
-- 5 Personal Administrativo
-- 5 Estudiantes
-
-**Aspectos Evaluados**:
-1. Facilidad de Uso
-2. Claridad en Información
-3. Velocidad de Proceso
-4. Satisfacción General
-
-[CAPTURA DE PANTALLA SUGERIDA: Dashboard de satisfacción de usuarios]
-
-#### Métricas de Éxito
-- Tiempo promedio de cotización: Reducido de 30 a 5 minutos
-- Errores de cálculo: Reducidos a 0%
-- Satisfacción del usuario: 95%
-
-### RETROALIMENTACIÓN Y MEJORAS
-
-#### Feedback Recibido
-1. **Coordinadores**:
-   - "Proceso de aprobación más eficiente"
-   - "Mejor control de descuentos"
-
-2. **Personal Administrativo**:
-   - "Cálculos automáticos ahorran tiempo"
-   - "Menos errores en cotizaciones"
-
-3. **Estudiantes**:
-   - "Cotizaciones claras y detalladas"
-   - "Respuesta más rápida"
-
-#### Mejoras Implementadas
-- Ajuste en formato de PDF
-- Clarificación de mensajes de error
-- Optimización de proceso de aprobación
-
-[CAPTURA DE PANTALLA SUGERIDA: Antes y después de mejoras implementadas]

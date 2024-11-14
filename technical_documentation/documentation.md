@@ -59,6 +59,9 @@ Objeto estándar para gestionar el catálogo de materias disponibles.
     * Semestral
     * Cuatrimestral
   - Requerido: Sí
+ 
+**Capturas en Images:**
+Prueba 1.2: Formulario de nueva materia con campos llenos
 
 #### 3. Pricebook (Listas de Precios)
 Configuración de precios por sede mediante listas de precios estándar.
@@ -75,6 +78,9 @@ Configuración de precios por sede mediante listas de precios estándar.
 
 4. Lista de Precios Querétaro
    - Precio por materia: $15,000
+  
+  **Capturas en Images:**
+Prueba 1.3: Formulario de nuevo pricebook con campos llenos
 
 #### 4. Opportunity (Inscripción)
 Objeto estándar adaptado para gestionar el proceso de inscripción.
@@ -95,6 +101,9 @@ Objeto estándar adaptado para gestionar el proceso de inscripción.
     * Mensualidades
     * Contado
   - Requerido: Sí
+
+**Capturas en Images:**
+Prueba 1.4: Formulario de nueva oportunidad (inscripción) con campos llenos
 
 #### 5. Quote (Cotización)
 Objeto estándar para gestionar cotizaciones de inscripción.
@@ -132,6 +141,9 @@ Objeto estándar para gestionar cotizaciones de inscripción.
     * Enviada
   - Default: Borrador
   - Requerido: Sí
+
+**Capturas en Images:**
+Prueba 1.5: Formulario de nueva cotización con campos llenos
 
 ### Relaciones entre Objetos
 

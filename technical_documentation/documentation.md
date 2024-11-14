@@ -42,6 +42,9 @@ Objeto estándar utilizado para almacenar la información de los estudiantes.
   - Rango válido: 0-10
   - Requerido: Sí
 
+**Capturas en Images:**
+Prueba 1.1: Formulario de nuevo estudiante con campos llenos
+
 #### 2. Product (Materias)
 Objeto estándar para gestionar el catálogo de materias disponibles.
 
@@ -157,6 +160,11 @@ OR(
     )
 )
 ```
+**Capturas en Images: Pruebas 2.1 y 2.2**
+
+Prueba 2.1: Mensaje de error al exceder límite de materias
+Prueba 2.2: Inscripción exitosa con 7 materias
+
 **Explicación:** La regla utiliza una estructura OR-AND para evaluar dos condiciones independientes de periodo académico, donde el OR permite que falle la validación si cualquier límite se excede, mientras el AND asegura que se verifique tanto el tipo de periodo como su límite correspondiente.
 
 **Razonamiento:** Utiliza ISPICKVAL para comparaciones eficientes de valores de lista de selección, además de proporcionar mensajes de error específicos para cada caso.
@@ -189,6 +197,20 @@ NumeroMaterias__c * CASE(Campus__c,
     0)
 ```
 
+**Capturas en Images: Pruebas 3.1 a 3.4**
+Matriz de Pruebas: 
+| Campus | Materias | Resultado |
+|--------|----------|-----------|
+| Guanajuato | 3 | $51,000 |
+| Nuevo León | 3 | $54,000 |
+| Jalisco | 3 | $39,000 |
+| Querétaro | 3 | $45,000 |
+
+Prueba 3.1: Guanajuato 
+Prueba 3.2: Nuevo León 
+Prueba 3.3: Jalisco 
+Prueba 3.4: Querétaro
+
 **Explicación:** El campo utiliza CASE para determinar el precio según el campus y lo multiplica por el número de materias, retornando 0 si el campus no está en la lista definida.
 **Razonamiento:** Se implementó usando CASE para centralizar los precios y facilitar su actualización, mientras que la multiplicación directa mantiene el cálculo simple y eficiente.
 
@@ -219,6 +241,13 @@ CASE(NumeroMaterias__c,
 
 **Explicación:** Aplica descuentos progresivos según el número de materias: sin descuento para una materia, 10% en la segunda, y 15% en cada materia adicional.
 **Razonamiento:** La estructura CASE maneja los diferentes escenarios de descuento, calculando el monto exacto según la cantidad de materias inscrita.
+
+**Capturas en Images: Pruebas 4.1 a 4.3**
+Prueba 4.1: 1 materia
+Prueba 4.2: 2 materias
+Prueba 4.3: 4 materias
+
+
 
 #### 3. Descuento_por_Pago_de_Contado
 **Tipo:** Campo de Fórmula (Currency)
@@ -313,6 +342,12 @@ Este sección detalla la implementación del sistema de becas y descuentos para 
 - Beca Deportiva: 10%
 - Beca Familiar Docente: 30%
 - Beca Necesidad Económica: 30%
+
+**Capturas en Images: Pruebas 5.1 a 5.4**
+Prueba 5.1: Excelencia
+Prueba 5.2: Deportiva
+Prueba 5.3: Familiar Docente
+Prueba 5.4: Necesidad Económica
 
 #### 3. Total_Final (Actualizado)
 **Tipo:** Campo de Fórmula (Currency)
@@ -533,6 +568,11 @@ trigger QuoteEmailTrigger on Quote (after update) {
 ```
 **Explicación:** Activa el envío de email solo después de actualizar una cotización, delegando la lógica al handler.
 
+**Captura en Images: Pruebas 6.1 a 6.2**
+Prueba 6.1: Cotización Pago de Contado
+Prueba 6.2: Cotización Pago Mensualidades
+
+
 # Documentación Meta 5 - VALIDACIÓN Y REGLAS DE APROBACIÓN
 
 ### Descripción General
@@ -581,6 +621,14 @@ Esta sección detalla la implementación del proceso de aprobación y reglas de 
 - Field Update: EstadoCotizacion__c = "Rechazada"
 
 Explicación: Gestiona el flujo de aprobación desde la solicitud hasta la decisión final, actualizando estados y notificando automáticamente.
+
+**Captura en Images: Pruebas 7.1 a 7.5**
+**Escenarios**:
+Prueba 7.1: Envío a aprobación
+Prueba 7.2: Correo recibido de aprobación
+Prueba 7.3: Aprobación o rechazo de la cotización
+Prueba 7.4: Comentarios de aprobación
+Prueba 7.5: Aprobación completada
 
 
 #### 4. Page Layout Modifications

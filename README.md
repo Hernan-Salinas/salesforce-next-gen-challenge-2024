@@ -1,4 +1,5 @@
 ## 📁 Proyecto Salesforce - Optimización del Sistema de Cobranza Universitaria
+Editado por Hernan Salinas Ibarra
 
 Repositorio estructurado en dos secciones principales: **Código Fuente** y **Documentación**. Algunos documentos en la carpeta de Documentación pueden estar en formato PDF para mayor claridad y portabilidad.
 

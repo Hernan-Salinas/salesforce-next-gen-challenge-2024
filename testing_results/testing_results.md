@@ -102,9 +102,9 @@ Prueba 6.2: Cotización Pago Mensualidades
 
 **Captura en Images: Pruebas 7.1 a 7.5**
 **Escenarios**:
-1. Envío a aprobación
-2. Correo recibido de aprobación
-3. Aprobación o rechazo de la cotización
-4. Comentarios de aprobación
-5. Aprobación completada
+Prueba 7.1: Envío a aprobación
+Prueba 7.2: Correo recibido de aprobación
+Prueba 7.3: Aprobación o rechazo de la cotización
+Prueba 7.4: Comentarios de aprobación
+Prueba 7.5: Aprobación completada
 
